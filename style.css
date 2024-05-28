@@ -39,6 +39,10 @@ main {
 #background { 
     position: relative;
     max-height: 100vh;
+    @media screen {
+        width: 500px;
+    }
+    max-width: 100%;
 }
 
 img { 
@@ -52,7 +56,7 @@ img {
 
 #bg-slogan {
     position: absolute;
-    top: 25%;
+    top: 13rem;
     width: 100%;
     
     display: flex;
@@ -80,11 +84,11 @@ h3 { max-width: 50ch; }
 }
 
 form {
-    width: 100%;
+    max-width: 100%;
     background-color: #ffffff;
     box-shadow: 0 2px 5px -1px #808080;
-    padding-top: 3em;
-    padding-bottom: 3em;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 form > h3 {
@@ -152,7 +156,6 @@ input:not(input:focus):invalid {
 #login {
     color: var(--text-color);
     font-weight: 500;
-
     margin-left: var(--margin-left);
 }
 
