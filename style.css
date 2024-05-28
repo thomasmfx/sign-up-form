@@ -7,27 +7,37 @@
 
 :root {
     --margin-left: 2.6rem;
-    --text-color : #212529;
+    --text-color : #023047;
     --shadow: 0 2px 5px #808080;
+    --darker-blue: #63A9BF;
+    --lighter-blue: #7AB5C8;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
-body { background-color: #f0fdff; }
+input { all: unset; }
+
+body { 
+    background: #f8fdff;
+
+}
 
 main { 
     display: flex;
     font-family: 'Inter', sans-serif;
 }
 
+#right-side {
+    flex-wrap: wrap;
+}
+
 #background { 
     position: relative;
-    align-content: center;
 }
 
 #bg-image img { 
@@ -38,8 +48,9 @@ main {
 #bg-slogan {
     position: absolute;
     top: 25%;
-    min-width: 100%;
-
+    width: 100%;
+    max-width: 100%;
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -52,7 +63,9 @@ main {
     text-align: center;
 }
 
-#bg-image { height: 100vh; }
+#bg-image { 
+    height: 100vh;
+}
 
 h3 { max-width: 50ch; }
 
@@ -68,8 +81,8 @@ h3 { max-width: 50ch; }
 }
 
 form {
-    width: 100vw;
-    background-color: rgb(255, 255, 255);
+    width: 100%;
+    background-color: #ffffff;
     box-shadow: 0 2px 5px -1px #808080;
     padding-top: 3em;
     padding-bottom: 3em;
@@ -84,7 +97,6 @@ form > h3 {
 }
 
 label {
-    font-family: 'DM Mono', monospace;
     font-size: 0.75rem;
     font-weight: 500;
     margin-top: 1.2rem;
@@ -103,20 +115,24 @@ input {
     display: block;
     padding: 0.5em 1em;
     
-    border: 1px solid #c5c5c5;
-    border-radius: 4px;
+    border: 2px solid #dedede;
+    border-radius: 5px;
 }
 
 input:focus {
-    border-color: #7AB5C8;
+    border: 2px solid var(--lighter-blue);
     box-shadow: var(--shadow);
+}
+
+input:invalid {
+    border: 2px solid #fe4a49;
 }
 
 #submit-button {
     margin: var(--margin-left);
-    padding: 1rem 2em;
+    padding: 1em 2em;
     
-    background-color: #63A9BF;
+    background: linear-gradient(to left, var(--darker-blue), #69bfea);
     color: #FFFFFF;
     box-shadow: 0 2px 5px #808080;
     
@@ -131,17 +147,19 @@ input:focus {
 
 #submit-button:hover {
     cursor: pointer;
-    background-color: #7AB5C8;
+    background-color: var(--lighter-blue);
 }
 
-
 #login {
+    color: var(--text-color);
+    font-weight: 500;
+
     margin-left: var(--margin-left);
 }
 
 a {
     text-decoration: none;
-    color: #63A9BF;
+    color: var(--darker-blue);
 }
 
 
