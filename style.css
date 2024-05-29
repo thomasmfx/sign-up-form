@@ -17,42 +17,44 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 input { all: unset; }
 
-body { 
-    background: #f8fdff;
+h3 { max-width: 50ch; }
 
-}
+body { background: #f8fdff; }
+
+#hero > h3:last-child { margin-top: 2rem; }
+
 
 main { 
-    display: flex;
     font-family: 'Inter', sans-serif;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    height: 100vh; 
+}
+
+#left-side {
+    position: relative;
+    flex-basis: 30%;
 }
 
 #right-side {
+    flex-basis: 70%;
     flex-wrap: wrap;
 }
 
-#background { 
-    position: relative;
-    max-height: 100vh;
-    @media screen {
-        width: 500px;
-    }
+#bg-image {
+    display: block;
     max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
 }
 
-img { 
-    position: relative; 
-    max-height: 100%;
-}
-
-#bg-image { 
-    height: 100vh;
-}
 
 #bg-slogan {
     position: absolute;
@@ -70,17 +72,11 @@ img {
     font-size: 4rem;
 }
 
-h3 { max-width: 50ch; }
-
 #hero {
     color: var(--text-color);
     font-size: 1.2rem;
     padding-top: 2rem;
     margin: var(--margin-left);
-}
-
-#hero > h3:last-child {
-    margin-top: 2rem;
 }
 
 form {
@@ -89,11 +85,12 @@ form {
     box-shadow: 0 2px 5px -1px #808080;
     padding-top: 3rem;
     padding-bottom: 3rem;
+    padding-left: var(--margin-left);
+    padding-right: var(--margin-left);
 }
 
 form > h3 {
     display: block;
-    margin-left: var(--margin-left);
     font-size: 1.3rem;
     color: var(--text-color);
 
@@ -105,12 +102,16 @@ label {
     margin-top: 1.2rem;
 }
 
+.optional {
+    font-style: italic;
+    color: #808080;
+}
+
 .form-row {
     display: flex;
     flex-wrap: wrap;
     row-gap: 2em;
     column-gap: 5em;
-    margin-left: var(--margin-left);
     margin-top: 2em;
 }
 
@@ -127,7 +128,7 @@ input:focus {
     box-shadow: var(--shadow);
 }
 
-input:not(input:focus):invalid {
+input:not(input:focus):not(:placeholder-shown):invalid {
     border: 2px solid #fe4a49;
 }
 
@@ -163,6 +164,5 @@ a {
     text-decoration: none;
     color: var(--darker-blue);
 }
-
 
 

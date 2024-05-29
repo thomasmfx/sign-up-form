@@ -9,13 +9,11 @@
 </head>
 <body>
     <main>
-        <div id="background">
-            <div id="bg-image">
-                <img src="assets/images/form-image.jpg" alt="">
-            </div>
+        <div id="left-side">
+            <img id="bg-image" src="assets/images/form-image.jpg" alt="">
             <div id="bg-slogan">
                 <img id="slogan-logo" src="assets/images/sun.svg" alt="White icon of the sun">
-                <span id="slogan-text">Odin</span>
+                <span>Odin</span>
             </div>
         </div>
         <div id="right-side">
@@ -30,31 +28,31 @@
                 <div class="form-row">
                     <div id="first-input">
                         <label for="first-name">FIRST NAME</label>
-                        <input type="text" name="user_first_name" id="first-name">
+                        <input type="text" name="user_first_name" id="first-name" placeholder="" required>
                     </div>
                     <div id="second-input">
-                        <label for="last-name">LAST NAME</label>
-                        <input type="text" name="user_last_name" id="last-name">
+                        <label for="last-name">LAST NAME <span class="optional">(optional)</span></label>
+                        <input type="text" name="user_last_name" id="last-name" >
                     </div>
                 </div>
                 <div class="form-row">
                     <div id="third-input">
                         <label for="email">EMAIL</label>
-                        <input type="email" name="user_email" id="email">
+                        <input type="email" name="user_email" id="email" placeholder="" required>
                     </div>
                     <div id="fourth-input">
-                        <label for="phone">PHONE NUMBER</label>
+                        <label for="phone">PHONE NUMBER <span class="optional">(optional)</span></label>
                         <input type="number" name="user_phone_number" id="phone">
                     </div>
                 </div>
                 <div class="form-row">
                     <div id="third-input">
                         <label for="pwd">PASSWORD</label>
-                        <input type="password" name="user_password" id="pwd">
+                        <input type="password" name="user_password" id="pwd" placeholder="" required>
                     </div>
                     <div id="fourth-input">
                         <label for="pwd_confirmation">CONFIRM PASSWORD</label>
-                        <input type="password" name="user_confirmed_password" id="pwd_confirmation">
+                        <input type="password" name="user_confirmed_password" id="pwd_confirmation" placeholder="" required>
                     </div>
                 </div>
             </form>
