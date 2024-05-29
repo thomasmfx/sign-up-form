@@ -11,6 +11,7 @@
     --shadow: 0 2px 5px #808080;
     --darker-blue: #63A9BF;
     --lighter-blue: #7AB5C8;
+    --light-blue: #3dc4f1;
 }
 
 * {
@@ -124,7 +125,7 @@ input {
 }
 
 input:focus {
-    border: 2px solid var(--lighter-blue);
+    border: 2px solid var(--light-blue);
     box-shadow: var(--shadow);
 }
 
@@ -132,13 +133,29 @@ input:not(input:focus):not(:placeholder-shown):invalid {
     border: 2px solid #fe4a49;
 }
 
+input:not(input:focus):not(:placeholder-shown):valid {
+    border-color: #70e000;
+}
+
+input[type="password"]:not(input:focus):not(:placeholder-shown):invalid {
+    border: 2px solid #fe4a49;
+}
+
+input[type="password"]:valid {
+    border-color: #70e000;
+}
+
+input[type="password"]:focus:invalid {
+    border-color: #fed811;
+}
+
 #submit-button {
     margin: var(--margin-left);
     padding: 1em 2em;
     
-    background: linear-gradient(to left, var(--darker-blue), #69bfea);
+    background: linear-gradient(to right, var(--light-blue), #69bfea);
     color: #FFFFFF;
-    box-shadow: 0 2px 5px #808080;
+    box-shadow: 0 1px 5px #808080;
     
     border: none;
     border-radius: 5px;
@@ -162,7 +179,7 @@ input:not(input:focus):not(:placeholder-shown):invalid {
 
 a {
     text-decoration: none;
-    color: var(--darker-blue);
+    color: var(--light-blue);
 }
 
 

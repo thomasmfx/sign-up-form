@@ -32,7 +32,7 @@
                     </div>
                     <div id="second-input">
                         <label for="last-name">LAST NAME <span class="optional">(optional)</span></label>
-                        <input type="text" name="user_last_name" id="last-name" >
+                        <input type="text" name="user_last_name" id="last-name" placeholder="">
                     </div>
                 </div>
                 <div class="form-row">
@@ -42,17 +42,17 @@
                     </div>
                     <div id="fourth-input">
                         <label for="phone">PHONE NUMBER <span class="optional">(optional)</span></label>
-                        <input type="number" name="user_phone_number" id="phone">
+                        <input type="number" name="user_phone_number" id="phone" placeholder="">
                     </div>
                 </div>
                 <div class="form-row">
                     <div id="third-input">
                         <label for="pwd">PASSWORD</label>
-                        <input type="password" name="user_password" id="pwd" placeholder="" required>
+                        <input type="password" name="user_password" id="pwd" placeholder="" minlength="6" required>
                     </div>
                     <div id="fourth-input">
                         <label for="pwd_confirmation">CONFIRM PASSWORD</label>
-                        <input type="password" name="user_confirmed_password" id="pwd_confirmation" placeholder="" required>
+                        <input type="password" name="user_confirmed_password" id="pwd_confirmation" placeholder="" minlength="6" required>
                     </div>
                 </div>
             </form>
