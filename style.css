@@ -28,7 +28,6 @@ body { background: #f8fdff; }
 
 #hero > h3:last-child { margin-top: 2rem; }
 
-
 main { 
     font-family: 'Inter', sans-serif;
 
@@ -36,10 +35,11 @@ main {
     flex-wrap: wrap;
     justify-content: flex-start;
 
-    height: 100vh; 
+    min-height: 100vh; 
 }
 
 #left-side {
+    overflow: hidden;
     position: relative;
     flex-basis: 30%;
 }
@@ -84,23 +84,24 @@ form {
     max-width: 100%;
     background-color: #ffffff;
     box-shadow: 0 2px 5px -1px #808080;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    padding-left: var(--margin-left);
-    padding-right: var(--margin-left);
+    padding: 3rem var(--margin-left);
 }
 
 form > h3 {
     display: block;
     font-size: 1.3rem;
     color: var(--text-color);
-
 }
 
 label {
     font-size: 0.75rem;
     font-weight: 500;
     margin-top: 1.2rem;
+}
+
+.invisible, .short, #invalid-email, #invalid-number {
+    font-size: 0.8rem;
+    color: #FFFFFF;
 }
 
 .optional {
@@ -146,7 +147,19 @@ input[type="password"]:valid {
 }
 
 input[type="password"]:focus:invalid {
-    border-color: #fed811;
+    border-color: #fe4a49;
+}
+
+input[type="password"]:not(:placeholder-shown):invalid + .short {
+    color: red;
+}
+
+input[type="email"]:not(input:focus):not(:placeholder-shown):invalid + #invalid-email {
+    color: red;
+}
+
+input[type="number"]:not(input:focus):not(:placeholder-shown):invalid + #invalid-number {
+    color: red;
 }
 
 #submit-button {
@@ -163,7 +176,6 @@ input[type="password"]:focus:invalid {
     font-family: 'Inter';
     font-weight: 600;
     font-size: 0.9rem;
-
 }
 
 #submit-button:hover {
