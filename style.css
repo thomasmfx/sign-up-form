@@ -22,9 +22,14 @@
 
 input { all: unset; }
 
-h3 { max-width: 50ch; }
+h3 { 
+    max-width: 50ch;
+}
 
-body { background: #f8fdff; }
+body { 
+    background: #f8fdff; 
+    overflow-x: hidden;
+}
 
 #hero > h3:last-child { margin-top: 2rem; }
 
@@ -34,19 +39,19 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-
+    
     min-height: 100vh; 
 }
 
 #left-side {
-    overflow: hidden;
     position: relative;
-    flex-basis: 30%;
+    flex: 1;
+    overflow: hidden;
 }
 
 #right-side {
     flex-basis: 70%;
-    flex-wrap: wrap;
+    padding-top: 1%;
 }
 
 #bg-image {
@@ -56,10 +61,9 @@ main {
     object-fit: cover;
 }
 
-
 #bg-slogan {
     position: absolute;
-    top: 13rem;
+    top: min(250px, 25%);
     width: 100%;
     
     display: flex;
@@ -76,20 +80,24 @@ main {
 #hero {
     color: var(--text-color);
     font-size: 1.2rem;
-    padding-top: 2rem;
-    margin: var(--margin-left);
+    padding-left: clamp(3%, 1rem, 2.5rem);
+    padding-right: min(1rem, 2.5rem);
+    padding-top: var(--margin-left);
+    padding-bottom: var(--margin-left);
 }
 
 form {
     max-width: 100%;
     background-color: #ffffff;
     box-shadow: 0 2px 5px -1px #808080;
-    padding: 3rem var(--margin-left);
+    padding-left: clamp(3%, 1rem, 2.5rem);
+    padding-right: min(1rem, 2.5rem);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 form > h3 {
-    display: block;
-    font-size: 1.3rem;
+    font-size: max(1.3rem, 1rem);
     color: var(--text-color);
 }
 
@@ -119,7 +127,10 @@ label {
 
 input {
     display: block;
-    padding: 0.5em 1em;
+    padding-top: 0.5em ;
+    padding-bottom: 0.5em ;
+    padding-right: 1em;
+    padding-left: 1em;
     
     border: 2px solid #dedede;
     border-radius: 5px;
@@ -162,9 +173,16 @@ input[type="number"]:not(input:focus):not(:placeholder-shown):invalid + #invalid
     color: red;
 }
 
+footer {
+    padding-left: clamp(3%, 1rem, 2.5rem);
+    padding-right: min(1rem, 2.5rem);
+    padding-top: var(--margin-left);
+    padding-bottom: var(--margin-left);
+}
+
 #submit-button {
-    margin: var(--margin-left);
     padding: 1em 2em;
+    margin-bottom: var(--margin-left);
     
     background: linear-gradient(to right, var(--light-blue), #69bfea);
     color: #FFFFFF;
@@ -186,7 +204,7 @@ input[type="number"]:not(input:focus):not(:placeholder-shown):invalid + #invalid
 #login {
     color: var(--text-color);
     font-weight: 500;
-    margin-left: var(--margin-left);
+    flex-basis: 100%;
 }
 
 a {
