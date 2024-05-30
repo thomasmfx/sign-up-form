@@ -6,7 +6,7 @@
 }
 
 :root {
-    --margin-left: 2.6rem;
+    --regular-margin: 2.6rem;
     --text-color : #023047;
     --shadow: 0 2px 5px #808080;
     --darker-blue: #63A9BF;
@@ -82,8 +82,8 @@ main {
     font-size: 1.2rem;
     padding-left: clamp(3%, 1rem, 2.5rem);
     padding-right: min(1rem, 2.5rem);
-    padding-top: var(--margin-left);
-    padding-bottom: var(--margin-left);
+    padding-top: var(--regular-margin);
+    padding-bottom: var(--regular-margin);
 }
 
 form {
@@ -176,13 +176,13 @@ input[type="number"]:not(input:focus):not(:placeholder-shown):invalid + #invalid
 footer {
     padding-left: clamp(3%, 1rem, 2.5rem);
     padding-right: min(1rem, 2.5rem);
-    padding-top: var(--margin-left);
-    padding-bottom: var(--margin-left);
+    padding-top: var(--regular-margin);
+    padding-bottom: var(--regular-margin);
 }
 
 #submit-button {
     padding: 1em 2em;
-    margin-bottom: var(--margin-left);
+    margin-bottom: var(--regular-margin);
     
     background: linear-gradient(to right, var(--light-blue), #69bfea);
     color: #FFFFFF;
