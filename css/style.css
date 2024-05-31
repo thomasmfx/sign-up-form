@@ -165,7 +165,7 @@ input[type="password"]:focus:invalid {
     border-color: #fe4a49;
 }
 
-input[type="password"]:not(:placeholder-shown):invalid + .short {
+input[type="password"]:focus:invalid + .short {
     color: red;
 }
 
@@ -214,32 +214,5 @@ footer {
 a {
     text-decoration: none;
     color: var(--light-blue);
-}
-
-#copyright {    
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    gap: 1rem;
-    width: 100%;
-    padding: 10px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    
-    font-size: 1rem;
-    color: white;
-    font-family: 'Inter';
-    font-weight: 500;
-}
-
-i {
-    transition: .2s ease-in-out;
-}
-
-i:hover {
-    transform: scale(1.2)
 }
 
