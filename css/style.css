@@ -169,6 +169,10 @@ input[type="password"]:focus:invalid + .short {
     color: red;
 }
 
+input[type="password"]:not(input:focus):not(:placeholder-shown):invalid + .short {
+    color: red;
+}
+
 input[type="email"]:not(input:focus):not(:placeholder-shown):invalid + #invalid-email {
     color: red;
 }
